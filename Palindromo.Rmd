@@ -1,0 +1,23 @@
+---
+title: "Palindromo"
+author: "IPR AMR"
+date: "15/3/2020"
+bibliography: C:/Users/iparedes/Documents/Clase/Palindromo.bib
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Poder de mercado en productos
+
+
+## Introducción
+
+La presencia de poder de mercado tiene implicaciones en el bienestar y en la asignación de los recursos. 
+
+Las empresas con poder de mercado pueden establecer precios por encima de sus costos marginales
+
+### Datos
+
