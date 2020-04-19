@@ -9,3 +9,13 @@
 #6.- SURESTE (cuatro): Campeche(4), Quintana Roo(23), Tabasco(27), Yucatan(31)
 #7.- OESTE (cuatro): Colima(6), Jalisco(14), Michoacan(16), Nayarit(18)
 #8.- ESTE (cuatro): Hidalgo(13), Puebla(21), Tlaxcala(29), Veracruz(30)*/
+
+INPC_octubre_2014=114.5690
+INPC_octubre_2015=117.410
+factor_inflac_2014=INPC_octubre_2015/INPC_octubre_2014
+
+symmetry_imposed=1
+
+# library optmum, pgraph
+optset
+#__output=0
