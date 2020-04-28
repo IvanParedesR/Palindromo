@@ -10,6 +10,8 @@
 #7.- OESTE (cuatro): Colima(6), Jalisco(14), Michoacan(16), Nayarit(18)
 #8.- ESTE (cuatro): Hidalgo(13), Puebla(21), Tlaxcala(29), Veracruz(30)*/
 
+tinit=hsec
+
 INPC_octubre_2014=114.5690
 INPC_octubre_2015=117.410
 factor_inflac_2014=INPC_octubre_2015/INPC_octubre_2014
@@ -19,3 +21,85 @@ symmetry_imposed=1
 # library optmum, pgraph
 optset
 #__output=0
+
+ # /*library maxlik;*/
+  
+load INPP_CONSTRUCCION_46[4968,6]=inpp_construccion_46_ciudades.asc
+inpp_mat_46_fecha=INPP_CONSTRUCCION_46[.,1]
+inpp_mat_46_estado=INPP_CONSTRUCCION_46[.,2]
+inpp_mat_46_municipio=INPP_CONSTRUCCION_46[.,3]
+inpp_mat_46_latitud=INPP_CONSTRUCCION_46[.,4]*pi/180 #/*(en radianes)*/
+inpp_mat_46_longitud=INPP_CONSTRUCCION_46[.,5]*pi/180 #/*(en radianes)*/
+inpp_mat_46_materiales=INPP_CONSTRUCCION_46[.,6]
+
+
+load INPC_46[4968,66]=inpc_46_ciudades.asc
+
+inpc_46_fecha=INPC_46[.,1];
+inpc_46_estado=INPC_46[.,2];
+inpc_46_municipio=INPC_46[.,3];
+inpc_46_latitud=INPC_46[.,4]*pi/180; /*(en radianes)*/
+  inpc_46_longitud=INPC_46[.,5]*pi/180; /*(en radianes)*/
+  inpc_46_tortilla=INPC_46[.,6];
+inpc_46_pan_dulce=INPC_46[.,7];
+inpc_46_pan_blanco=INPC_46[.,8];
+inpc_46_pollo=INPC_46[.,9];
+inpc_46_carne_res=INPC_46[.,10];
+inpc_46_visceras_res=INPC_46[.,11];
+inpc_46_chorizo=INPC_46[.,12];
+inpc_46_jamon=INPC_46[.,13];
+inpc_46_salchichas=INPC_46[.,14];
+inpc_46_tocino=INPC_46[.,15];
+inpc_46_leche_pasteurizada=INPC_46[.,16];
+inpc_46_leche_en_polvo=INPC_46[.,17];
+inpc_46_leche_evaporada=INPC_46[.,18];
+inpc_46_queso_fresco=INPC_46[.,19];
+inpc_46_queso_oaxaca=INPC_46[.,20];
+inpc_46_crema_de_leche=INPC_46[.,21];
+inpc_46_queso_manchego=INPC_46[.,22];
+inpc_46_mantequilla=INPC_46[.,23];
+inpc_46_queso_amarillo=INPC_46[.,24];
+inpc_46_huevo=INPC_46[.,25];
+inpc_46_manzana=INPC_46[.,26];
+inpc_46_platano=INPC_46[.,27];
+inpc_46_aguacate=INPC_46[.,28];
+inpc_46_papaya=INPC_46[.,29];
+inpc_46_naranja=INPC_46[.,30];
+inpc_46_limon=INPC_46[.,31];
+inpc_46_melon=INPC_46[.,32];
+inpc_46_uva=INPC_46[.,33];
+inpc_46_pera=INPC_46[.,34];
+inpc_46_guayaba=INPC_46[.,35];
+inpc_46_durazno=INPC_46[.,36];
+inpc_46_sandia=INPC_46[.,37];
+inpc_46_pina=INPC_46[.,38];
+inpc_46_jitomate=INPC_46[.,39];
+inpc_46_papa=INPC_46[.,40];
+inpc_46_cebolla=INPC_46[.,41];
+inpc_46_tomate_verde=INPC_46[.,42];
+inpc_46_lechuga_col=INPC_46[.,43];
+inpc_46_calabacita=INPC_46[.,44];
+inpc_46_zanahoria=INPC_46[.,45];
+inpc_46_chile_serrano=INPC_46[.,46];
+inpc_46_nopales=INPC_46[.,47];
+inpc_46_chayote=INPC_46[.,48];
+inpc_46_chile_poblano=INPC_46[.,49];
+inpc_46_pepino=INPC_46[.,50];
+inpc_46_ejotes=INPC_46[.,51];
+inpc_46_chicharo=INPC_46[.,52];
+inpc_46_frijol=INPC_46[.,53];
+inpc_46_jugos_nectares=INPC_46[.,54];
+inpc_46_refrescos=INPC_46[.,55];
+inpc_46_agua_embotellada=INPC_46[.,56];
+inpc_46_antibioticos=INPC_46[.,57];
+inpc_46_cardiovasculares=INPC_46[.,58];
+inpc_46_analgesicos=INPC_46[.,59];
+inpc_46_nutricionales=INPC_46[.,60];
+inpc_46_gastrointestinales=INPC_46[.,61];
+inpc_46_antigripales=INPC_46[.,62];
+inpc_46_medicina_tos=INPC_46[.,63];
+inpc_46_medicina_piel=INPC_46[.,64];
+inpc_46_autobus_foraneo=INPC_46[.,65];
+inpc_46_transporte_aereo=INPC_46[.,66];
+
+load PRECIOS_PROMEDIO_46[46,70]=precios_promedio_46_ciudades_junio_2011.asc; 
